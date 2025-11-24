@@ -1,52 +1,118 @@
-# MERN Stack Capstone Project
+# Event Supply Shop (MERN Stack)
 
-This assignment focuses on designing, developing, and deploying a comprehensive full-stack MERN application that showcases all the skills you've learned throughout the course.
+A full-stack MERN (MongoDB, Express, React, Node.js) E-commerce platform for an event supply shop, featuring a product catalog, shopping cart, checkout, admin dashboard, and real-time order notifications using Socket.io.
 
-## Assignment Overview
+## 🌐 Live Demo
 
-You will:
-1. Plan and design a full-stack MERN application
-2. Develop a robust backend with MongoDB, Express.js, and Node.js
-3. Create an interactive frontend with React.js
-4. Implement testing across the entire application
-5. Deploy the application to production
+[https://mern-final-project-ciwag-creators.onrender.com](https://mern-final-project-ciwag-creators.onrender.com)
 
-## Getting Started
+## 📦 Features
 
-1. Accept the GitHub Classroom assignment
-2. Clone the repository to your local machine
-3. Follow the instructions in the `Week8-Assignment.md` file
-4. Plan, develop, and deploy your capstone project
+* User registration and login with JWT authentication
+* Role-based access (customer / admin)
+* Product catalog with categories
+* Add products to cart and checkout
+* Admin dashboard for product and order management
+* Real-time notifications for new orders via Socket.io
+* Responsive UI with React
+* RESTful API with Express.js
+* MongoDB database
+* Unit, integration, and E2E testing setup
+* CI/CD ready deployment
 
-## Files Included
+## 🛠 Tech Stack
 
-- `Week8-Assignment.md`: Detailed assignment instructions
+* **Frontend:** React, React Router, Axios, Socket.io-client
+* **Backend:** Node.js, Express.js, MongoDB, Mongoose, Socket.io
+* **Authentication:** JWT
+* **Testing:** Jest, Supertest, React Testing Library
+* **Deployment:** Render (Frontend & Backend), MongoDB Atlas
 
-## Requirements
+## 📂 Project Structure
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git and GitHub account
-- Accounts on deployment platforms (Render/Vercel/Netlify/etc.)
+```
+mern-final-project-ciwag-creators/
+├─ backend/       # Express API + MongoDB
+├─ frontend/      # React client
+├─ README.md
+```
 
-## Project Ideas
+## ⚡ Getting Started
 
-The `Week8-Assignment.md` file includes several project ideas, but you're encouraged to develop your own idea that demonstrates your skills and interests.
+### Backend
 
-## Submission
+1. Clone the repo:
 
-Your project will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+```bash
+git clone https://github.com/PLP-MERN-Stack-Development/mern-final-project-ciwag-creators.git
+cd mern-final-project-ciwag-creators/backend
+```
 
-1. Commit and push your code regularly
-2. Include comprehensive documentation
-3. Deploy your application and add the live URL to your README.md
-4. Create a video demonstration and include the link in your README.md
+2. Install dependencies:
 
-## Resources
+```bash
+npm install
+```
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [GitHub Classroom Guide](https://docs.github.com/en/education/manage-coursework-with-github-classroom) 
+3. Copy `.env.example` to `.env` and fill in your values (MONGO_URI, JWT_SECRET, CLIENT_URL)
+4. Start the server:
+
+```bash
+npm run dev
+```
+
+Server will run on `http://localhost:5000`
+
+### Frontend
+
+1. Navigate to frontend folder:
+
+```bash
+cd ../frontend
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Copy `.env.example` to `.env` and set `REACT_APP_API_URL=http://localhost:5000/api`
+4. Start the React app:
+
+```bash
+npm start
+```
+
+Frontend will run on `http://localhost:3000`
+
+## 🧪 Testing
+
+* Backend: `npm test` inside `/backend`
+* Frontend: `npm test` inside `/frontend`
+
+## 🔗 Deployment
+
+* Backend deployed to Render: Configure Root Directory to `/backend` and `npm start`.
+* Frontend deployed to Render/Vercel: Configure Root Directory to `/frontend` and `npm run build`.
+* Ensure `.env` variables are correctly set on the platform.
+
+## 📄 API Endpoints
+
+* **Auth:** `/api/auth/register`, `/api/auth/login`
+* **Products:** `/api/products` (GET, POST, PUT, DELETE)
+* **Orders:** `/api/orders` (POST, GET)
+
+## ⚙️ Advanced Features
+
+* Real-time new order notifications via Socket.io
+* Admin CRUD for products and order management
+* Cart management and checkout simulation
+
+## 👨‍💻 Author
+
+Izo Chiemeke — Fullstack Developer, MERN Specialist, Creator of this project
+
+## 📌 License
+
+This project is licensed under MIT License.
